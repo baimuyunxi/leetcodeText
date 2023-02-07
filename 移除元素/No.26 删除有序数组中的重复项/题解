@@ -1,0 +1,18 @@
+### 双指针法：
+
+```java
+public int removeDuplicates(int[] nums) {
+            int temp = nums.length;
+            int left = 1, last = 1;
+            while (left < temp) {
+                if (nums[left] != nums[left -1]){
+                    nums[last] = nums[left];
+                    last++;
+                }
+                left++;
+            }
+            return last;
+		}
+}
+```
+
